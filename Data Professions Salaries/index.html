@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Prediction</title>
+</head>
+<body>
+<h1>Salary Prediction</h1>
+
+<form action="/predict" method="post">
+    <!-- Sex -->
+    <label for="sex">Sex:</label>
+    <input type="text" name="sex" required>
+
+    <!-- Designation -->
+    <label for="designation">Designation:</label>
+    <input type="text" name="designation" required>
+
+    <!-- Age -->
+    <label for="age">Age:</label>
+    <input type="text" name="age" required>
+
+    <!-- Unit -->
+    <label for="unit">Unit:</label>
+    <input type="text" name="unit" required>
+
+    <!-- Leaves Used -->
+    <label for="leaves_used">Leaves Used:</label>
+    <input type="text" name="leaves_used" required>
+
+    <!-- Ratings -->
+    <label for="ratings">Ratings:</label>
+    <input type="text" name="ratings" required>
+
+    <!-- Past Exp -->
+    <label for="past_exp">Past Exp:</label>
+    <input type="text" name="past_exp" required>
+
+    <!-- Years Worked -->
+    <label for="years_worked">Years Worked:</label>
+    <input type="text" name="years_worked" required>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Predict Salary">
+</form>
+
+{% if prediction_text %}
+<h2>{{ prediction_text }}</h2>
+{% endif %}
+</body>
+</html>
